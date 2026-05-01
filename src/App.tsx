@@ -14,10 +14,18 @@ export default function App() {
         {/* Header */}
         <header className="border-b border-slate-800 bg-slate-900/50 px-8 py-6 backdrop-blur-sm sticky top-0 z-40">
           <div className="flex justify-between items-center relative z-10 max-w-[1600px] mx-auto w-full">
-            <div className="flex items-center gap-3">
-              <div className="w-3 h-3 bg-cyan-400 rounded-full shadow-[0_0_8px_rgba(34,211,238,0.8)]" />
+            <div className="flex items-center gap-4">
+              <div className="relative group">
+                <div className="absolute -inset-1 bg-cyan-500 rounded-lg blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
+                <img 
+                  src="https://cdn-icons-png.flaticon.com/512/3067/3067260.png" 
+                  alt="AutoDrive Logo" 
+                  className="relative w-10 h-10 object-contain brightness-110 contrast-125"
+                  referrerPolicy="no-referrer"
+                />
+              </div>
               <h1 className="text-xl font-bold tracking-tight text-white uppercase flex gap-2">
-                AUTOTWIN <span className="text-slate-500 font-light hidden sm:inline">| Global Price Shock Digital Twin</span>
+                AutoDrive <span className="text-cyan-500 font-light font-mono text-sm self-center tracking-[0.3em] hidden sm:inline ml-2">Digital Twin</span>
               </h1>
             </div>
             <div className="hidden lg:flex gap-10 items-center">
