@@ -1,0 +1,6 @@
+{
+  "name": "AutoDrive Digital Twin",
+  "description": "Supply chain price shock monitoring and prediction system for automotive OEMs, mapping BOM components to global economic drivers.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}
