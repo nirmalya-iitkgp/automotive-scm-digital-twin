@@ -9,6 +9,15 @@
   --color-brand-card: #1E293B;
   --color-brand-border: #334155;
   --color-brand-accent: #22D3EE;
+
+  @keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+}
+
+@utility animate-marquee {
+  animation: marquee 40s linear infinite;
 }
 
 @utility custom-scrollbar {

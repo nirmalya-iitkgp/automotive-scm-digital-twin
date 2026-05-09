@@ -28,19 +28,10 @@ export default function App() {
                 AutoDrive <span className="text-cyan-500 font-light font-mono text-sm self-center tracking-[0.3em] hidden sm:inline ml-2">Digital Twin</span>
               </h1>
             </div>
-            <div className="hidden lg:flex gap-10 items-center">
-              <div className="text-right">
-                <div className="font-mono text-[9px] uppercase tracking-widest text-slate-500 mb-1">System State</div>
-                <div className="font-mono text-xs text-emerald-400 font-bold flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 bg-emerald-500 rounded-full animate-pulse" />
-                  DYNAMIC_SYNC_OK
-                </div>
-              </div>
               <div className="text-right border-l border-slate-800 pl-10">
                 <div className="font-mono text-[9px] uppercase tracking-widest text-slate-500 mb-1">Forecast Horizon</div>
                 <div className="font-mono text-xs text-slate-200">180 Days (Q3 Projection)</div>
               </div>
-            </div>
           </div>
         </header>
 
@@ -59,18 +50,29 @@ export default function App() {
         <footer className="mt-auto px-8 py-4 border-t border-slate-800 flex justify-between items-center text-[10px] font-mono text-slate-500">
           <div className="max-w-[1600px] mx-auto w-full flex justify-between">
             <div className="flex gap-6 uppercase tracking-wider">
-              <span>NODE: US-EAST-BOM-SYNC</span>
-              <span className="text-cyan-600">STATE: OPTIMIZED</span>
-            </div>
-            <div className="flex gap-6 uppercase tracking-wider">
               <span className="flex items-center gap-2">
                 <span className="w-1.5 h-1.5 bg-emerald-500 rounded-full animate-pulse" />
-                LIVE DATA STREAM
+                MARKET FEED ACTIVE
               </span>
-              <span>UTC_SYS_TIME: {new Date().toISOString().slice(0, 19).replace('T', ' ')}</span>
+              <span>SIMULATION TIME: {new Date().toISOString().slice(0, 19).replace('T', ' ')}</span>
             </div>
           </div>
         </footer>
+
+        {/* Legal Ticker Tape */}
+        <div className="bg-slate-950 border-t border-slate-800 h-8 flex items-center overflow-hidden">
+          <div className="animate-marquee whitespace-nowrap text-[10px] font-mono text-slate-600 uppercase flex gap-20">
+            <span>LEGAL DISCLAIMER: ALL DATA PROVIDED BY THE AUTODRIVE DIGITAL TWIN IS FOR SIMULATION AND INFORMATIONAL PURPOSES ONLY.</span>
+            <span>PAST PERFORMANCE OF MARKET INDICES IS NOT INDICATIVE OF FUTURE RESULTS.</span>
+            <span>NO PART OF THIS VISUALIZATION CONSTITUTES FINANCIAL OR PROCUREMENT ADVICE.</span>
+            <span>SUPPLY CHAIN PROJECTIONS ARE SUBJECT TO UNFORESEEN GEOPOLITICAL AND ENVIRONMENTAL VARIABLES.</span>
+            {/* Duplicate for seamless looping */}
+            <span>LEGAL DISCLAIMER: ALL DATA PROVIDED BY THE AUTODRIVE DIGITAL TWIN IS FOR SIMULATION AND INFORMATIONAL PURPOSES ONLY.</span>
+            <span>PAST PERFORMANCE OF MARKET INDICES IS NOT INDICATIVE OF FUTURE RESULTS.</span>
+            <span>NO PART OF THIS VISUALIZATION CONSTITUTES FINANCIAL OR PROCUREMENT ADVICE.</span>
+            <span>SUPPLY CHAIN PROJECTIONS ARE SUBJECT TO UNFORESEEN GEOPOLITICAL AND ENVIRONMENTAL VARIABLES.</span>
+          </div>
+        </div>
       </main>
     </div>
   );

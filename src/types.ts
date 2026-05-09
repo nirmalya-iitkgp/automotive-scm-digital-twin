@@ -35,6 +35,18 @@ export interface ComponentData {
   sensitivityScore: number; // Calculated default
   supplier?: string;
   weight_kg?: number;
+  logisticsSensitivity: number; // 0 to 1, how much freight impacts cost
+  isGlobalSourcing: boolean; // true = Global, false = Nearshore
+  substitution?: {
+    name: string;
+    rationale: string;
+    materials: {
+      primary: MaterialSource;
+      secondary?: MaterialSource;
+      tertiary?: MaterialSource;
+    };
+    weight_kg?: number;
+  };
 }
 
 export interface MarketIndex {
